@@ -34,6 +34,7 @@ body {
   background-color: var(--red-color);
   height: 80px;
   position: fixed;
+  z-index: 1;
 }
 /* navbar */
 #navbar > .container {
@@ -59,9 +60,36 @@ body {
   padding: 1.5rem;
   color: var(--white-color);
   font-size: 1.4em;
-  transition: 0.5s;
+  transition: ease-in 0.5s;
 }
 
 #navbar > .container ul li a:hover {
   background-color: var(--main-blue);
+}
+
+/* Welcome Section */
+#welcome-section {
+  position: absolute;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  color: var(--white-color);
+}
+#welcome-section > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#welcome-section > .container h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+#welcome-section > .container p {
+  color: var(--red-color);
+  font-size: 2em;
+  font-style: italic;
 }
