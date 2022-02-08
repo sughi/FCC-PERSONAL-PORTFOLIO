@@ -21,22 +21,24 @@ a {
 body {
   font-family: "Poppins", sans-serif;
 }
-
+/* body */
 /* container */
 .container {
   width: 95%;
   height: auto;
   margin: 0 auto;
 }
-
+/* Container */
+/* navbar */
 #navbar {
   width: 100%;
   background-color: var(--red-color);
   height: 80px;
   position: fixed;
+  top: 0;
   z-index: 1;
 }
-/* navbar */
+
 #navbar > .container {
   display: flex;
   height: 100%;
@@ -66,10 +68,10 @@ body {
 #navbar > .container ul li a:hover {
   background-color: var(--main-blue);
 }
+/* navbar */
 
 /* Welcome Section */
 #welcome-section {
-  position: absolute;
   margin-top: 80px;
   height: calc(100vh - 80px);
   width: 100%;
@@ -92,4 +94,96 @@ body {
   color: var(--red-color);
   font-size: 2em;
   font-style: italic;
+}
+/* Welcome Section */
+
+/* Projects */
+#projects {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  background-color: var(--main-blue);
+}
+
+#projects h2 {
+  text-align: center;
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 2em;
+}
+
+#projects .grid-project {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  width: 100%;
+  grid-gap: 4rem;
+  max-width: 1280px;
+}
+
+#projects h2::after {
+  content: "";
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--white-color);
+}
+
+#projects .grid-project .image-project {
+  height: calc(100% - 2rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+#projects .grid-project img {
+  display: block;
+}
+#projects .grid-project > .project-tile > .project-title {
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: var(--main-gray);
+  border-radius: 0 0 5px 5px;
+}
+
+#projects .grid-project > .project-tile span {
+  color: var(--main-gray);
+  margin: 5px;
+  font-weight: 600;
+  transition: 0.8s;
+}
+#projects .grid-project a:hover .project-title span {
+  color: var(--red-color);
+}
+
+#projects .grid-project > .project-tile > .project-title h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+#projects .container {
+  text-align: center;
+}
+
+#projects .btn {
+  margin: 50px auto;
+  display: inline-block;
+  padding: 10px 50px;
+  background-color: var(--main-gray);
+  color: var(--white-color);
+  border-radius: 2px;
+  transition: 0.5s ease-in-out;
+}
+
+#projects .btn > i {
+  margin-left: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+#projects .btn:hover {
+  background-color: var(--red-color);
+}
+#projects .btn:hover i {
+  transform: translateX(5px);
 }
