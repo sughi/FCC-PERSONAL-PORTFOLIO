@@ -187,3 +187,58 @@ body {
 #projects .btn:hover i {
   transform: translateX(5px);
 }
+
+/* Section Social-media */
+#profile-link {
+  background-color: var(--main-gray);
+  padding: 80px 0;
+  color: var(--white-color);
+}
+
+#profile-link > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#profile-link > .container h1 {
+  margin-bottom: 10px;
+  font-size: 3em;
+  font-weight: 600;
+}
+#profile-link > .container p {
+  margin-bottom: 25px;
+  font-size: 1.2em;
+  font-weight: 200;
+  font-style: italic;
+}
+
+#profile-link .social-media {
+  width: 100%;
+}
+
+#profile-link .social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#profile-link .social-media ul li {
+  list-style: none;
+  margin: 0 20px;
+  transition: transform 0.3s ease-out;
+}
+#profile-link .social-media ul li:hover {
+  transform: translateY(10px);
+}
+#profile-link .social-media ul li a {
+  color: var(--white-color);
+  font-size: 1.4em;
+  text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+#profile-link .social-media ul li a i {
+  margin-right: 5px;
+}
